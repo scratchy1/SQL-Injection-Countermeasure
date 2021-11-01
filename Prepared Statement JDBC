@@ -1,0 +1,15 @@
+import java .sql .*;
+// Sei getConnection eine Methode , die
+// die Verbindung zur Datenbank aufbaut .
+Connection conn = getConnection ();
+String anw = new String (" SELECT * FROM user " +
+" WHERE kennung = ?" );
+PreparedStatement pstat = conn . prepareStatement (anw );
+// Der String eingabe enthalte die Benutzereingabe
+// Setze den 1. Parameter (? im Anweisungs - String )
+// auf den Wert der Variablen eingabe
+pstat . setString (1, eingabe );
+ResultSet rs = pstat . executeQuery ();
+// Und wieder die Ergebnismenge verarbeiten
+
+//Hier wurde der Datenbankzugriff mittels JDBC für Java implementiert.
